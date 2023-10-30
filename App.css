@@ -1,0 +1,54 @@
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+  
+  section {
+    display: flex;
+    justify-content: space-around; /* Asegura espacio entre la imagen y el texto */
+    align-items: flex-start; /* Alinea el contenido al inicio del contenedor */
+    gap: 2rem; /* Espacio entre los elementos */
+    width: 100%;
+    max-width: 1200px; /* Ajusta como necesites */
+    margin-top: 40px;
+  }
+  
+  .centered-fact {
+    text-align: center; /* Esto centrará el texto del párrafo específico */
+    width: 100%;
+    /* en negrita */
+    font-weight: bold;
+  }
+
+  .text-container {
+    display: flex;
+    flex-direction: column; /* Hace que los párrafos se apilen verticalmente */
+    max-width: 60%; /* Ajusta como necesites */
+  }
+  
+  section img {
+    max-width: 320px; /* Asegura que la imagen no sea demasiado grande */
+    height: auto; /* Mantiene la proporción de la imagen */
+  }
+  
+
+  /* Estilos responsivos para tablets */
+@media (max-width: 768px) {
+    section {
+      flex-direction: column; /* Cambia la dirección del layout para que los elementos se apilen verticalmente */
+      align-items: center; /* Centra los elementos */
+    }
+  
+    .text-container, section img {
+      max-width: 90%; /* Permite que el contenedor de texto y la imagen ocupen más espacio */
+    }
+  }
+  
+  /* Estilos responsivos para móviles */
+  @media (max-width: 480px) {
+    .text-container, section img {
+      max-width: 100%; /* Permite que el contenedor de texto y la imagen ocupen todo el ancho disponible */
+    }
+  }
